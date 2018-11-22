@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    cce/appgroup: xddddddddddddddddd
+    name: database
+  name: mongodb
+  selfLink: /api/v1/namespaces/default/services/mongodb
+spec:
+  ports:
+  - name: mongodb0
+    port: 27017
+    protocol: TCP
+    targetPort: 27017
+  selector:
+    cce/appgroup: xddddddddddddddddd
+    name: database
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
