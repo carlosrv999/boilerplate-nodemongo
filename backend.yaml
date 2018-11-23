@@ -8,7 +8,7 @@ metadata:
   creationTimestamp: null
   generation: 1
   labels:
-    cce/appgroup: xddddddddddddddddd
+    cce/appgroup: mongodb-node-bp
     name: backend
     rollingupdate: "false"
   name: backend
@@ -16,7 +16,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    cce/appgroup: xddddddddddddddddd
+    cce/appgroup: mongodb-node-bp
     name: backend
     rollingupdate: "false"
   template:
@@ -25,7 +25,7 @@ spec:
         scheduler.alpha.kubernetes.io/affinity: '{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"failure-domain.beta.kubernetes.io/zone","operator":"NotIn","values":[""]}]}]}}}'
       creationTimestamp: null
       labels:
-        cce/appgroup: xddddddddddddddddd
+        cce/appgroup: mongodb-node-bp
         name: backend
         rollingupdate: "false"
     spec:

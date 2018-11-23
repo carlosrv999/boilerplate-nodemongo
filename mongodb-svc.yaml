@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    cce/appgroup: xddddddddddddddddd
+    cce/appgroup: mongodb-node-bp
     name: database
   name: mongodb
   selfLink: /api/v1/namespaces/default/services/mongodb
@@ -14,7 +14,7 @@ spec:
     protocol: TCP
     targetPort: 27017
   selector:
-    cce/appgroup: xddddddddddddddddd
+    cce/appgroup: mongodb-node-bp
     name: database
   sessionAffinity: None
   type: ClusterIP
