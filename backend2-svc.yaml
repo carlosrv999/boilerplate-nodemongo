@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    cce/appgroup: application2
+    name: backend1543458606
+  name: backend1543458606
+  selfLink: /api/v1/namespaces/default/services/backend1543458606
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: backend01543458606
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    cce/appgroup: application2
+    name: backend1543458606
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
