@@ -2,7 +2,7 @@
 appname=$1
 datapath=$2
 datesec=$(date +%s)
-cat > mongodb2-svc.yaml <<EOF
+cat > mongodb-svc.yaml <<EOF
 apiVersion: v1
 kind: Service
 metadata:
@@ -26,7 +26,7 @@ spec:
 status:
   loadBalancer: {}
 EOF
-cat > mongodb2.yaml <<EOF
+cat > mongodb.yaml <<EOF
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -92,7 +92,7 @@ spec:
 status:
   replicas: 0
 EOF
-cat > backend2-svc.yaml <<EOF
+cat > backend-svc.yaml <<EOF
 apiVersion: v1
 kind: Service
 metadata:
@@ -117,7 +117,7 @@ spec:
 status:
   loadBalancer: {}
 EOF
-cat > backend2.yaml <<EOF
+cat > backend.yaml <<EOF
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -181,4 +181,3 @@ spec:
 status:
   replicas: 0
 EOF
-cat mongodb2.yaml
