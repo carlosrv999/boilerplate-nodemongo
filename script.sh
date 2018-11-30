@@ -1,6 +1,6 @@
 #!/bin/bash
 appname=$1
-datapath=$2
+replicas=$2
 datesec=$(date +%s)
 cat > mongodb-svc.yaml <<EOF
 apiVersion: v1
@@ -134,7 +134,7 @@ metadata:
   name: backend$datesec
   selfLink: /api/v1/namespaces/default/replicationcontrollers/backend$datesec
 spec:
-  replicas: 1
+  replicas: $replicas
   selector:
     cce/appgroup: $appname
     name: backend$datesec
